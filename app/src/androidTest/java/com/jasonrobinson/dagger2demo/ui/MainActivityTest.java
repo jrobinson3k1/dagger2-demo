@@ -37,10 +37,10 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 
     public void testTime() {
         Calendar cal = Calendar.getInstance();
-        cal.set(2008, Calendar.SEPTEMBER, 23);
+        cal.set(2001, Calendar.SEPTEMBER, 11);
         Mockito.when(mClock.getNow()).thenReturn(cal);
 
         TextView textView = (TextView) getActivity().findViewById(R.id.time_TextView);
-        assertEquals("September 23, 2008", textView.getText());
+        assertEquals("September 11, 2001", textView.getText());
     }
 }
